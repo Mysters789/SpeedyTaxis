@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedyTaxis", "SpeedyTaxis\SpeedyTaxis.csproj", "{2AC9962B-7B13-4DAA-B002-A7A719E34C84}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4BC22221-EB0C-4D80-A836-B88D6D887B80} = {4BC22221-EB0C-4D80-A836-B88D6D887B80}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumberTextBox", "PhoneNumberTextBox\PhoneNumberTextBox.csproj", "{897CD02A-1D0D-4483-AFC5-5E21EC8AA4D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyWebService", "I:\CurrencyWebService\CurrencyWebService\CurrencyWebService.csproj", "{4BC22221-EB0C-4D80-A836-B88D6D887B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedyTaxisDriverApp", "SpeedyTaxisDriverApp\SpeedyTaxisDriverApp.csproj", "{3B8D1FAF-1478-4AC7-B595-4A6160D4EA70}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4BC22221-EB0C-4D80-A836-B88D6D887B80} = {4BC22221-EB0C-4D80-A836-B88D6D887B80}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentLikelyHoodComponent", "AccidentLikelyHoodComponent\AccidentLikelyHoodComponent.csproj", "{4BD332EA-A3B5-4234-BB12-2B2100DA632B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualComponentAccident", "VisualComponentAccident\VisualComponentAccident.csproj", "{EEB69E59-1A7C-4343-9A7C-197610FD6649}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AC9962B-7B13-4DAA-B002-A7A719E34C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC9962B-7B13-4DAA-B002-A7A719E34C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC9962B-7B13-4DAA-B002-A7A719E34C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC9962B-7B13-4DAA-B002-A7A719E34C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{897CD02A-1D0D-4483-AFC5-5E21EC8AA4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897CD02A-1D0D-4483-AFC5-5E21EC8AA4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897CD02A-1D0D-4483-AFC5-5E21EC8AA4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897CD02A-1D0D-4483-AFC5-5E21EC8AA4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BC22221-EB0C-4D80-A836-B88D6D887B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC22221-EB0C-4D80-A836-B88D6D887B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC22221-EB0C-4D80-A836-B88D6D887B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC22221-EB0C-4D80-A836-B88D6D887B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8D1FAF-1478-4AC7-B595-4A6160D4EA70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8D1FAF-1478-4AC7-B595-4A6160D4EA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8D1FAF-1478-4AC7-B595-4A6160D4EA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8D1FAF-1478-4AC7-B595-4A6160D4EA70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BD332EA-A3B5-4234-BB12-2B2100DA632B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BD332EA-A3B5-4234-BB12-2B2100DA632B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BD332EA-A3B5-4234-BB12-2B2100DA632B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BD332EA-A3B5-4234-BB12-2B2100DA632B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB69E59-1A7C-4343-9A7C-197610FD6649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB69E59-1A7C-4343-9A7C-197610FD6649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB69E59-1A7C-4343-9A7C-197610FD6649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB69E59-1A7C-4343-9A7C-197610FD6649}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA46C72E-827D-4A1C-8F51-2004C5719051}
+	EndGlobalSection
+EndGlobal

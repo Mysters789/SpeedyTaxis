@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpeedyTaxis.Model.EntryInSchedule">
+    <Position X="0.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAIAAAAAAAAAAQAAAQA=</HashCode>
+      <FileName>Model\EntryInSchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Model.Log">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAEAAAAAACIA=</HashCode>
+      <FileName>Model\Log.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Model.Qualification">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Model\Qualification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Model.Record">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Record.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Model.Session" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Session.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Model.Training">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Model\Training.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Model.UserModel">
+    <Position X="4" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgQABAAAAAAAEACAAQAAQAgAAEAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\UserModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Program" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.AdminPanel" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/weAQIUQACAAYBgTFACkIMBCgY4vkkAzkGAASAgRDDg=</HashCode>
+      <FileName>View\AdminPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Login" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAgAAATAAABAAAACEAABCIgAYAAAAEAQAAAAAAAA=</HashCode>
+      <FileName>View\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Properties.Resources" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpeedyTaxis.Properties.Settings" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

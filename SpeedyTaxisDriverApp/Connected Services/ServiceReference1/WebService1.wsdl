@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice">
+      <s:element name="AddToSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="training" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="outcome" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddToScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddToScheduleResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAllLogs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllLogsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllLogsResult" type="tns:ArrayOfArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfAnyType" nillable="true" type="tns:ArrayOfAnyType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAllQualifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllQualificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllQualificationsResult" type="tns:ArrayOfArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllDR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllDRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllDRResult" type="tns:ArrayOfArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllTraining">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllTrainingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllTrainingResult" type="tns:ArrayOfArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllScheduleResult" type="tns:ArrayOfArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTraining">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsertrainingTypeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTrainingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DPID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRecordResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteQualification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UQID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteQualificationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteDriver">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDriverResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDriverResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTraining">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="training" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validUntil" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTrainingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddTrainingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="newRecord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddRecordResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddQualification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="qualification" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validUntil" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddQualificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddQualificationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="startwork" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="endwork" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="startjourney" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="endjourney" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddLogResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usertype" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="phonenumber" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserTypeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetUsername">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUsernameResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetPhoneNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ph" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPhoneNumberResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetOutcome">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ScheduleID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetOutcomeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetOutcomeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="v" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="record" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditRecordResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllUsersResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpiredFromEveryone">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetExpiredFromEveryoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpiredFromEveryoneResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditTraining">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserTrainingTypeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="training" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validuntil" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditTrainingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EditQualification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserQualificationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="training" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validuntil" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditQualificationResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddToScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:AddToSchedule" />
+  </wsdl:message>
+  <wsdl:message name="AddToScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:AddToScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllLogsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllLogs" />
+  </wsdl:message>
+  <wsdl:message name="getAllLogsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllQualificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllQualifications" />
+  </wsdl:message>
+  <wsdl:message name="getAllQualificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllQualificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllDRSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllDR" />
+  </wsdl:message>
+  <wsdl:message name="getAllDRSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTrainingSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllTraining" />
+  </wsdl:message>
+  <wsdl:message name="getAllTrainingSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllTrainingResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllSchedule" />
+  </wsdl:message>
+  <wsdl:message name="getAllScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTrainingSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteTraining" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTrainingSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteTrainingResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRecord" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteQualificationSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteQualification" />
+  </wsdl:message>
+  <wsdl:message name="DeleteQualificationSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteQualificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDriverSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDriver" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDriverSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddTrainingSoapIn">
+    <wsdl:part name="parameters" element="tns:AddTraining" />
+  </wsdl:message>
+  <wsdl:message name="AddTrainingSoapOut">
+    <wsdl:part name="parameters" element="tns:AddTrainingResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:AddRecord" />
+  </wsdl:message>
+  <wsdl:message name="AddRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:AddRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddQualificationSoapIn">
+    <wsdl:part name="parameters" element="tns:AddQualification" />
+  </wsdl:message>
+  <wsdl:message name="AddQualificationSoapOut">
+    <wsdl:part name="parameters" element="tns:AddQualificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddLogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddLog" />
+  </wsdl:message>
+  <wsdl:message name="AddLogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="AddUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserType" />
+  </wsdl:message>
+  <wsdl:message name="SetUserTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUsernameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUsername" />
+  </wsdl:message>
+  <wsdl:message name="SetUsernameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPhoneNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPhoneNumber" />
+  </wsdl:message>
+  <wsdl:message name="SetPhoneNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPhoneNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetOutcomeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetOutcome" />
+  </wsdl:message>
+  <wsdl:message name="SetOutcomeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetOutcomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:EditRecord" />
+  </wsdl:message>
+  <wsdl:message name="EditRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:EditRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExpiredFromEveryoneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpiredFromEveryone" />
+  </wsdl:message>
+  <wsdl:message name="GetExpiredFromEveryoneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpiredFromEveryoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditTrainingSoapIn">
+    <wsdl:part name="parameters" element="tns:EditTraining" />
+  </wsdl:message>
+  <wsdl:message name="EditTrainingSoapOut">
+    <wsdl:part name="parameters" element="tns:EditTrainingResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditQualificationSoapIn">
+    <wsdl:part name="parameters" element="tns:EditQualification" />
+  </wsdl:message>
+  <wsdl:message name="EditQualificationSoapOut">
+    <wsdl:part name="parameters" element="tns:EditQualificationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="AddToSchedule">
+      <wsdl:input message="tns:AddToScheduleSoapIn" />
+      <wsdl:output message="tns:AddToScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllLogs">
+      <wsdl:input message="tns:getAllLogsSoapIn" />
+      <wsdl:output message="tns:getAllLogsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllQualifications">
+      <wsdl:input message="tns:getAllQualificationsSoapIn" />
+      <wsdl:output message="tns:getAllQualificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDR">
+      <wsdl:input message="tns:getAllDRSoapIn" />
+      <wsdl:output message="tns:getAllDRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTraining">
+      <wsdl:input message="tns:getAllTrainingSoapIn" />
+      <wsdl:output message="tns:getAllTrainingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllSchedule">
+      <wsdl:input message="tns:getAllScheduleSoapIn" />
+      <wsdl:output message="tns:getAllScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input message="tns:GetUserSoapIn" />
+      <wsdl:output message="tns:GetUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTraining">
+      <wsdl:input message="tns:DeleteTrainingSoapIn" />
+      <wsdl:output message="tns:DeleteTrainingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecord">
+      <wsdl:input message="tns:DeleteRecordSoapIn" />
+      <wsdl:output message="tns:DeleteRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQualification">
+      <wsdl:input message="tns:DeleteQualificationSoapIn" />
+      <wsdl:output message="tns:DeleteQualificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDriver">
+      <wsdl:input message="tns:DeleteDriverSoapIn" />
+      <wsdl:output message="tns:DeleteDriverSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTraining">
+      <wsdl:input message="tns:AddTrainingSoapIn" />
+      <wsdl:output message="tns:AddTrainingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRecord">
+      <wsdl:input message="tns:AddRecordSoapIn" />
+      <wsdl:output message="tns:AddRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddQualification">
+      <wsdl:input message="tns:AddQualificationSoapIn" />
+      <wsdl:output message="tns:AddQualificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLog">
+      <wsdl:input message="tns:AddLogSoapIn" />
+      <wsdl:output message="tns:AddLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input message="tns:AddUserSoapIn" />
+      <wsdl:output message="tns:AddUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserType">
+      <wsdl:input message="tns:SetUserTypeSoapIn" />
+      <wsdl:output message="tns:SetUserTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUsername">
+      <wsdl:input message="tns:SetUsernameSoapIn" />
+      <wsdl:output message="tns:SetUsernameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPhoneNumber">
+      <wsdl:input message="tns:SetPhoneNumberSoapIn" />
+      <wsdl:output message="tns:SetPhoneNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOutcome">
+      <wsdl:input message="tns:SetOutcomeSoapIn" />
+      <wsdl:output message="tns:SetOutcomeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditRecord">
+      <wsdl:input message="tns:EditRecordSoapIn" />
+      <wsdl:output message="tns:EditRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input message="tns:GetAllUsersSoapIn" />
+      <wsdl:output message="tns:GetAllUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredFromEveryone">
+      <wsdl:input message="tns:GetExpiredFromEveryoneSoapIn" />
+      <wsdl:output message="tns:GetExpiredFromEveryoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTraining">
+      <wsdl:input message="tns:EditTrainingSoapIn" />
+      <wsdl:output message="tns:EditTrainingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditQualification">
+      <wsdl:input message="tns:EditQualificationSoapIn" />
+      <wsdl:output message="tns:EditQualificationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddToSchedule">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddToSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllLogs">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllQualifications">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllQualifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDR">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTraining">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllTraining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSchedule">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTraining">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/DeleteTraining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecord">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/DeleteRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQualification">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/DeleteQualification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDriver">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/DeleteDriver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTraining">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddTraining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRecord">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddQualification">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddQualification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLog">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserType">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/SetUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUsername">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/SetUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPhoneNumber">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/SetPhoneNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOutcome">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/SetOutcome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditRecord">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/EditRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredFromEveryone">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/GetExpiredFromEveryone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTraining">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/EditTraining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditQualification">
+      <soap:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/EditQualification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddToSchedule">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddToSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllLogs">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllLogs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllQualifications">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllQualifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDR">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllDR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTraining">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllTraining" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSchedule">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/getAllSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/GetUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTraining">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/DeleteTraining" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecord">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/DeleteRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQualification">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/DeleteQualification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDriver">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/DeleteDriver" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTraining">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddTraining" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRecord">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddQualification">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddQualification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLog">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/AddUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserType">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/SetUserType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUsername">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/SetUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPhoneNumber">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/SetPhoneNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOutcome">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/SetOutcome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditRecord">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/EditRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredFromEveryone">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/GetExpiredFromEveryone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTraining">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/EditTraining" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditQualification">
+      <soap12:operation soapAction="http://stuiis.cms.gre.ac.uk/ms2721o/currencyservice/EditQualification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:51952/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:51952/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
